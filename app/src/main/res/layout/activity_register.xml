@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:background="@color/colorApps2"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imageView_back"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/icon_back" />
+
+        <TextView
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:gravity="center_vertical"
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="DAFTAR" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorBackground"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/editText_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/custom_background_linear_white"
+                    android:hint="Emel"
+                    android:inputType="textPersonName"
+                    android:paddingLeft="10dp" />
+
+                <EditText
+                    android:id="@+id/editText_jawatan"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/custom_background_linear_white"
+                    android:hint="Jawatan"
+                    android:inputType="textPersonName"
+                    android:paddingLeft="10dp" />
+
+                <EditText
+                    android:id="@+id/editText_no_telefon"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/custom_background_linear_white"
+                    android:hint="No telefon"
+                    android:inputType="textPersonName"
+                    android:paddingLeft="10dp" />
+
+                <EditText
+                    android:id="@+id/editText_nama"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/custom_background_linear_white"
+                    android:hint="Nama"
+                    android:inputType="textPersonName"
+                    android:paddingLeft="10dp" />
+
+                <EditText
+                    android:id="@+id/editText_kata_laluan"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/custom_background_linear_white"
+                    android:hint="Katalaluan"
+                    android:inputType="textPassword"
+                    android:paddingLeft="10dp" />
+
+                <Button
+                    android:layout_margin="20dp"
+                    android:id="@+id/button_daftar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorApps2"
+                    android:text="Daftar" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
