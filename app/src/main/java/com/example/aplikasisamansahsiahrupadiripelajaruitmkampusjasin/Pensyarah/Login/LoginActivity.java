@@ -1,9 +1,11 @@
 package com.example.aplikasisamansahsiahrupadiripelajaruitmkampusjasin.Pensyarah.Login;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -11,8 +13,16 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.aplikasisamansahsiahrupadiripelajaruitmkampusjasin.MainActivity;
+import com.example.aplikasisamansahsiahrupadiripelajaruitmkampusjasin.Pensyarah.Class.PensyarahClass;
 import com.example.aplikasisamansahsiahrupadiripelajaruitmkampusjasin.Pensyarah.Register.RegisterActivity;
 import com.example.aplikasisamansahsiahrupadiripelajaruitmkampusjasin.R;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import java.util.Map;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -20,11 +30,15 @@ public class LoginActivity extends AppCompatActivity {
     ImageView imageView_back;
     EditText editText_email,editText_password;
     Button button_login,button_daftar;
+    private DatabaseReference mDatabase;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login3);
+
+        //FIREBASE DATABASE REF
+        mDatabase = FirebaseDatabase.getInstance().getReference("pensyarah");
 
         imageView_back = findViewById(R.id.imageView_back);
         editText_email = findViewById(R.id.editText_email);
@@ -58,10 +72,35 @@ public class LoginActivity extends AppCompatActivity {
                 }else if(editText_password.getText().toString().equals("")){
                     Toast.makeText(getApplicationContext(),"Sila masukkan katalaluan",Toast.LENGTH_LONG).show();
                 }else{
-
+                    login();
                 }
             }
         });
+    }
+
+    //LOGIN FUNCTION
+    private void login() {
+        mDatabase.orderByChild("email").equalTo(editText_email.getText().toString())
+                .addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(DataSnapshot dataSnapshot) {
+                        if (dataSnapshot.exists()) {
+                            for (DataSnapshot pensyarah: dataSnapshot.getChildren()) {
+                                if(editText_password.getText().toString().equals(pensyarah.child("katalaluan").getValue().toString())){
+                                    Toast.makeText(getApplicationContext(),"Daftar masuk berjaya",Toast.LENGTH_LONG).show();
+                                }else{
+                                    Toast.makeText(getApplicationContext(), "Katalaluan tidak sah !!!", Toast.LENGTH_LONG).show();
+                                }
+                            }
+
+                        } else {
+                            Toast.makeText(getApplicationContext(), "Emel tidak didaftar !!!", Toast.LENGTH_LONG).show();
+                        }
+                    }
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+                    }
+                });
     }
 
     //UNTUK BACK

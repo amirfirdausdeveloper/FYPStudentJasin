@@ -14,9 +14,9 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
+import com.example.aplikasisamansahsiahrupadiripelajaruitmkampusjasin.Admin.Login.LoginActivity;
 import com.example.aplikasisamansahsiahrupadiripelajaruitmkampusjasin.Pelajar.Class.PelajarClass;
 import com.example.aplikasisamansahsiahrupadiripelajaruitmkampusjasin.Pensyarah.Class.PensyarahClass;
-import com.example.aplikasisamansahsiahrupadiripelajaruitmkampusjasin.Pensyarah.Login.LoginActivity;
 import com.example.aplikasisamansahsiahrupadiripelajaruitmkampusjasin.R;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -140,7 +140,7 @@ public class RegisterActivity extends AppCompatActivity {
 
                             //displaying a success toast
                             Toast.makeText(getApplicationContext(), "Daftar berjaya. Sila log masuk", Toast.LENGTH_LONG).show();
-                            Intent next = new Intent(getApplicationContext(), LoginActivity.class);
+                            Intent next = new Intent(getApplicationContext(), com.example.aplikasisamansahsiahrupadiripelajaruitmkampusjasin.Pelajar.Login.LoginActivity.class);
                             startActivity(next);
                         }
                     }
