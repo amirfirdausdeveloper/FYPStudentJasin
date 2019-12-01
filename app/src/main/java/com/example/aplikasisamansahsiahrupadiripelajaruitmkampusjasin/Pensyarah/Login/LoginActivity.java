@@ -13,6 +13,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.aplikasisamansahsiahrupadiripelajaruitmkampusjasin.MainActivity;
+import com.example.aplikasisamansahsiahrupadiripelajaruitmkampusjasin.Pensyarah.Activity.MainDashboardPensyarah;
 import com.example.aplikasisamansahsiahrupadiripelajaruitmkampusjasin.Pensyarah.Class.PensyarahClass;
 import com.example.aplikasisamansahsiahrupadiripelajaruitmkampusjasin.Pensyarah.Register.RegisterActivity;
 import com.example.aplikasisamansahsiahrupadiripelajaruitmkampusjasin.R;
@@ -87,7 +88,9 @@ public class LoginActivity extends AppCompatActivity {
                         if (dataSnapshot.exists()) {
                             for (DataSnapshot pensyarah: dataSnapshot.getChildren()) {
                                 if(editText_password.getText().toString().equals(pensyarah.child("katalaluan").getValue().toString())){
-                                    Toast.makeText(getApplicationContext(),"Daftar masuk berjaya",Toast.LENGTH_LONG).show();
+
+                                    Intent next = new Intent(getApplicationContext(), MainDashboardPensyarah.class);
+                                    startActivity(next);
                                 }else{
                                     Toast.makeText(getApplicationContext(), "Katalaluan tidak sah !!!", Toast.LENGTH_LONG).show();
                                 }

@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Admin.Register.RegisterActivity"></activity>
+        <activity android:name=".Pensyarah.Activity.MainDashboardPensyarah"></activity>
+        <activity android:name=".Admin.Register.RegisterActivity" />
         <activity android:name=".Pelajar.Register.RegisterActivity" />
         <activity android:name=".Pensyarah.Register.RegisterActivity" />
         <activity android:name=".Pensyarah.Login.LoginActivity" />

@@ -8,4 +8,7 @@
         <item name="colorAccent">@color/colorFont</item>
     </style>
 
+    <style name="AppThemeNoAction.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="AppThemeNoAction.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
 </resources>
