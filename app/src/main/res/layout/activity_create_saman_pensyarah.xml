@@ -1,0 +1,679 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:background="@color/colorApps2"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imageView_back"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/icon_back" />
+
+        <TextView
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:gravity="center_vertical"
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="SAMAN" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="NAMA:"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/textView_nama"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingLeft="10dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:orientation="vertical"
+                android:background="@android:color/darker_gray"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="NO. TELEFON"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"/>
+
+                <TextView
+                    android:id="@+id/textView_no_tel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingLeft="10dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:orientation="vertical"
+                android:background="@android:color/darker_gray"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="NO. KAD PELAJAR"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/textView_no_pelajar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingLeft="10dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:orientation="vertical"
+                android:background="@android:color/darker_gray"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="NO. KAD PENGENALAN"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"/>
+
+                <TextView
+                    android:id="@+id/textView_no_kp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingLeft="10dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:orientation="vertical"
+                android:background="@android:color/darker_gray"/>
+
+            <LinearLayout
+                android:layout_margin="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="KOD PROGRAM"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"/>
+
+                <TextView
+                    android:id="@+id/textView_kod_program"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingLeft="10dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:orientation="vertical"
+                android:background="@android:color/darker_gray"/>
+
+            <LinearLayout
+                android:layout_margin="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="TARIKH DAN MASA"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"/>
+
+                <TextView
+                    android:id="@+id/textView_tarikh_masa"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingLeft="10dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_perempuan"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="30dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView13"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="KESALAHAN"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textView14"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="BAJU"
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/imageView_baju_p"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="5"
+                            app:srcCompat="@drawable/icon_arrow_down" />
+                    </LinearLayout>
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup_baju_p"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <RadioButton
+                            android:id="@+id/radioButton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Jarang" />
+
+                        <RadioButton
+                            android:id="@+id/radioButton2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Singkat (Tidak menutup punggung) " />
+
+                        <RadioButton
+                            android:id="@+id/radioButton5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Mempunyai tulisan,perkataaan atau gambar liar/lucah." />
+
+                        <RadioButton
+                            android:id="@+id/radioButton3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Lengan baju tidak sampai ke paras siku" />
+
+                        <RadioButton
+                            android:id="@+id/radioButton4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Baju masuk ke dalam (tuck in)" />
+
+                        <RadioButton
+                            android:id="@+id/radioButton4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Memakai purdah" />
+
+
+                    </RadioGroup>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textView14"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="SELUAR"
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/imageView_seluar_p"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="5"
+                            app:srcCompat="@drawable/icon_arrow_down" />
+                    </LinearLayout>
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup_seluar_p"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <RadioButton
+                            android:id="@+id/radioButton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Terlalu ketat" />
+
+                        <RadioButton
+                            android:id="@+id/radioButton2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Labuh seluar tidak sampai ke buku lali" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textView14"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="KASUT"
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/imageView_kasut_p"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="5"
+                            app:srcCompat="@drawable/icon_arrow_down" />
+                    </LinearLayout>
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup_kasut_p"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <RadioButton
+                            android:id="@+id/radioButton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Memakai selipar" />
+
+                    </RadioGroup>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textView14"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="RAMBUT"
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/imageView_rambut_p"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="5"
+                            app:srcCompat="@drawable/icon_arrow_down" />
+                    </LinearLayout>
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup_rambut_p"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <RadioButton
+                            android:id="@+id/radioButton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Panjang / tidak kemas" />
+
+                        <RadioButton
+                            android:id="@+id/radioButton2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Mewarnakan rambut" />
+                    </RadioGroup>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_lelaki"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="30dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView13"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="KESALAHAN"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textView14"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="BAJU"
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/imageView_baju"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="5"
+                            app:srcCompat="@drawable/icon_arrow_down" />
+                    </LinearLayout>
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup_baju"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <RadioButton
+                            android:id="@+id/radioButton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Jarang" />
+
+                        <RadioButton
+                            android:id="@+id/radioButton2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Tidak berkolar pada waktu pejabat" />
+
+                        <RadioButton
+                            android:id="@+id/radioButton3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Tidak dimasukkan ke dalam seluar (Baju jenis masuk ke dalam)" />
+
+                        <RadioButton
+                            android:id="@+id/radioButton4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Tidak Berlengan" />
+
+                        <RadioButton
+                            android:id="@+id/radioButton5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Mempunyai tulisan,perkataaan atau gambar liar/lucah." />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textView14"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="SELUAR"
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/imageView_seluar"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="5"
+                            app:srcCompat="@drawable/icon_arrow_down" />
+                    </LinearLayout>
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup_seluar"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <RadioButton
+                            android:id="@+id/radioButton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Memakai seluar pendek" />
+
+                        <RadioButton
+                            android:id="@+id/radioButton2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Ketak/koyak/lusuh/jarang" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textView14"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="KASUT"
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/imageView_kasut"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="5"
+                            app:srcCompat="@drawable/icon_arrow_down" />
+                    </LinearLayout>
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup_kasut"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <RadioButton
+                            android:id="@+id/radioButton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Memakai selipar" />
+
+                    </RadioGroup>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textView14"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="RAMBUT"
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/imageView_rambut"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="5"
+                            app:srcCompat="@drawable/icon_arrow_down" />
+                    </LinearLayout>
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup_rambut"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <RadioButton
+                            android:id="@+id/radioButton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Panjang / tidak kemas" />
+
+                        <RadioButton
+                            android:id="@+id/radioButton2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Mewarnakan rambut" />
+                    </RadioGroup>
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

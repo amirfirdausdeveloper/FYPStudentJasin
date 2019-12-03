@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.aplikasisamansahsiahrupadiripelajaruitmkampusjasin">
 
+    <uses-permission android:name="android.permission.CAMERA" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,12 +11,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Pensyarah.Activity.MainDashboardPensyarah"></activity>
+        <activity android:name=".Pensyarah.Activity.CreateSamanPensyarahActivity"></activity>
+        <activity android:name=".Pelajar.Activity.MainDashboardPelajar" />
+        <activity android:name=".Pensyarah.Activity.MainDashboardPensyarah" />
         <activity android:name=".Admin.Register.RegisterActivity" />
         <activity android:name=".Pelajar.Register.RegisterActivity" />
         <activity android:name=".Pensyarah.Register.RegisterActivity" />
         <activity android:name=".Pensyarah.Login.LoginActivity" />
         <activity android:name=".Pelajar.Login.LoginActivity" />
+        <activity android:name=".Pensyarah.Barcode.ScanActivity" />
         <activity android:name=".Admin.Login.LoginActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>

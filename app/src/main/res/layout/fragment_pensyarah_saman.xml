@@ -3,12 +3,57 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorBackground"
     tools:context=".Pensyarah.Fragment.PensyarahSamanFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:orientation="vertical">
 
+        <LinearLayout
+            android:layout_margin="40dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView8"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="CARIAN PELAJAR"
+                android:textColor="@color/colorApps"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/editText_student_id"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/custom_background_linear_white"
+                android:hint="Student Id"
+                android:inputType="textPersonName"
+                android:paddingLeft="15dp" />
+
+            <Button
+                android:layout_marginTop="30dp"
+                android:id="@+id/button_carian"
+                android:background="@color/colorApps"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="CARIAN" />
+
+            <Button
+                android:layout_marginTop="10dp"
+                android:id="@+id/button_barcode"
+                android:background="@color/colorApps"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="CARIAN BARCODE" />
+        </LinearLayout>
+
+    </LinearLayout>
 </FrameLayout>
