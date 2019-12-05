@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "1022216281002-s7oo6ovmobglfm4o8voqb5lu95bru3l6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.aplikasisamansahsiahrupadiripelajaruitmkampusjasin",
+            "certificate_hash": "6dedb1406068f267ddcb2ca21432d6d9d595fc79"
+          }
+        },
+        {
           "client_id": "1022216281002-tba325b4g89386lm96rihqtbl9lr6uk4.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {

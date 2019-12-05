@@ -9,6 +9,8 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -19,13 +21,14 @@ import com.example.aplikasisamansahsiahrupadiripelajaruitmkampusjasin.Pensyarah.
 import com.example.aplikasisamansahsiahrupadiripelajaruitmkampusjasin.Pensyarah.Fragment.PensyarahSamanFragment;
 import com.example.aplikasisamansahsiahrupadiripelajaruitmkampusjasin.Pensyarah.Fragment.PensyarahSenaraiSamanFragment;
 import com.example.aplikasisamansahsiahrupadiripelajaruitmkampusjasin.Pensyarah.Fragment.PensyarahUtamaFragment;
+import com.example.aplikasisamansahsiahrupadiripelajaruitmkampusjasin.Pensyarah.Login.LoginActivity;
 import com.example.aplikasisamansahsiahrupadiripelajaruitmkampusjasin.R;
 import com.google.android.material.navigation.NavigationView;
 
 public class MainDashboardPensyarah extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     NavigationView navigationView;
-    public static String pensyarah_email;
+    public static String pensyarah_email,pensyarah_name;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,6 +41,7 @@ public class MainDashboardPensyarah extends AppCompatActivity implements Navigat
 
         //GET INTENT DARI LOGIN
         pensyarah_email = getIntent().getStringExtra("email");
+        pensyarah_name = getIntent().getStringExtra("nama");
 
         navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
@@ -97,7 +101,7 @@ public class MainDashboardPensyarah extends AppCompatActivity implements Navigat
             fragment = new PensyarahSenaraiSamanFragment();
             displaySelectedFragment(fragment);
         }else if (id == R.id.nav_keluar) {
-
+            logKeluar();
         }
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
@@ -109,5 +113,28 @@ public class MainDashboardPensyarah extends AppCompatActivity implements Navigat
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.frame, fragment);
         fragmentTransaction.commit();
+    }
+
+    private void logKeluar(){
+        new AlertDialog.Builder(MainDashboardPensyarah.this)
+                .setCancelable(true)
+                .setIcon(android.R.drawable.ic_dialog_alert)
+                .setMessage("Adakah anda ingit log keluar?")
+                .setPositiveButton("Ya", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Intent next = new Intent(getApplicationContext(), LoginActivity.class);
+                        startActivity(next);
+                    }
+                }).setNegativeButton("Tidak", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    dialog.dismiss();
+                    navigationView.setCheckedItem(R.id.nav_utama);
+                    navigationView.getMenu().performIdentifierAction(R.id.nav_utama, 0);
+
+                }
+                })
+                .show();
     }
 }

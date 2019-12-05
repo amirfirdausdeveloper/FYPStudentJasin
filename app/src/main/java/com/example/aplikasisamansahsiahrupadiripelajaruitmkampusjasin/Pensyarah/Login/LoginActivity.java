@@ -91,6 +91,7 @@ public class LoginActivity extends AppCompatActivity {
 
                                     Intent next = new Intent(getApplicationContext(), MainDashboardPensyarah.class);
                                     next.putExtra("email",editText_email.getText().toString());
+                                    next.putExtra("nama",pensyarah.child("name").getValue().toString());
                                     startActivity(next);
                                 }else{
                                     Toast.makeText(getApplicationContext(), "Katalaluan tidak sah !!!", Toast.LENGTH_LONG).show();

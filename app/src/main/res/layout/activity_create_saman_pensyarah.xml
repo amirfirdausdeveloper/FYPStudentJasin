@@ -16,8 +16,8 @@
 
         <ImageView
             android:id="@+id/imageView_back"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="15dp"
             android:background="@drawable/icon_back" />
@@ -274,49 +274,50 @@
                             app:srcCompat="@drawable/icon_arrow_down" />
                     </LinearLayout>
 
-                    <RadioGroup
+
+                    <LinearLayout
                         android:id="@+id/radioGroup_baju_p"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
 
-                        <RadioButton
-                            android:id="@+id/radioButton"
+                        <CheckBox
+                            android:id="@+id/checkbox_p_baju_1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Jarang" />
 
-                        <RadioButton
-                            android:id="@+id/radioButton2"
+                        <CheckBox
+                            android:id="@+id/checkbox_p_baju_2"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Singkat (Tidak menutup punggung) " />
 
-                        <RadioButton
-                            android:id="@+id/radioButton5"
+                        <CheckBox
+                            android:id="@+id/checkbox_p_baju_3"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Mempunyai tulisan,perkataaan atau gambar liar/lucah." />
 
-                        <RadioButton
-                            android:id="@+id/radioButton3"
+                        <CheckBox
+                            android:id="@+id/checkbox_p_baju_4"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Lengan baju tidak sampai ke paras siku" />
 
-                        <RadioButton
-                            android:id="@+id/radioButton4"
+                        <CheckBox
+                            android:id="@+id/checkbox_p_baju_5"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Baju masuk ke dalam (tuck in)" />
 
-                        <RadioButton
-                            android:id="@+id/radioButton4"
+                        <CheckBox
+                            android:id="@+id/checkbox_p_baju_6"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Memakai purdah" />
+                    </LinearLayout>
 
-
-                    </RadioGroup>
                 </LinearLayout>
 
                 <LinearLayout
@@ -347,23 +348,25 @@
                             app:srcCompat="@drawable/icon_arrow_down" />
                     </LinearLayout>
 
-                    <RadioGroup
+                    <LinearLayout
                         android:id="@+id/radioGroup_seluar_p"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-
-                        <RadioButton
-                            android:id="@+id/radioButton"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <CheckBox
+                            android:id="@+id/checkbox_p_seluar_1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Terlalu ketat" />
 
-                        <RadioButton
-                            android:id="@+id/radioButton2"
+                        <CheckBox
+                            android:id="@+id/checkbox_p_seluar_2"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Labuh seluar tidak sampai ke buku lali" />
-                    </RadioGroup>
+                    </LinearLayout>
+
+
                 </LinearLayout>
 
                 <LinearLayout
@@ -393,19 +396,21 @@
                             android:layout_weight="5"
                             app:srcCompat="@drawable/icon_arrow_down" />
                     </LinearLayout>
-
-                    <RadioGroup
+                    <LinearLayout
                         android:id="@+id/radioGroup_kasut_p"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
 
-                        <RadioButton
-                            android:id="@+id/radioButton"
+                        <CheckBox
+                            android:id="@+id/checkbox_p_kasut_1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Memakai selipar" />
+                    </LinearLayout>
 
-                    </RadioGroup>
+
+
                 </LinearLayout>
 
                 <LinearLayout
@@ -436,23 +441,25 @@
                             app:srcCompat="@drawable/icon_arrow_down" />
                     </LinearLayout>
 
-                    <RadioGroup
+                    <LinearLayout
                         android:id="@+id/radioGroup_rambut_p"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
 
-                        <RadioButton
-                            android:id="@+id/radioButton"
+                        <CheckBox
+                            android:id="@+id/checkbox_p_rambut_1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Panjang / tidak kemas" />
 
-                        <RadioButton
-                            android:id="@+id/radioButton2"
+                        <CheckBox
+                            android:id="@+id/checkbox_p_rambut_2"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Mewarnakan rambut" />
-                    </RadioGroup>
+                    </LinearLayout>
+
                 </LinearLayout>
 
             </LinearLayout>
@@ -500,41 +507,42 @@
                             app:srcCompat="@drawable/icon_arrow_down" />
                     </LinearLayout>
 
-                    <RadioGroup
+                    <LinearLayout
                         android:id="@+id/radioGroup_baju"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-
-                        <RadioButton
-                            android:id="@+id/radioButton"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <CheckBox
+                            android:id="@+id/checkbox_L_baju_1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Jarang" />
 
-                        <RadioButton
-                            android:id="@+id/radioButton2"
+                        <CheckBox
+                            android:id="@+id/checkbox_L_baju_2"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Tidak berkolar pada waktu pejabat" />
 
-                        <RadioButton
-                            android:id="@+id/radioButton3"
+                        <CheckBox
+                            android:id="@+id/checkbox_L_baju_3"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Tidak dimasukkan ke dalam seluar (Baju jenis masuk ke dalam)" />
 
-                        <RadioButton
-                            android:id="@+id/radioButton4"
+                        <CheckBox
+                            android:id="@+id/checkbox_L_baju_4"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Tidak Berlengan" />
 
-                        <RadioButton
-                            android:id="@+id/radioButton5"
+                        <CheckBox
+                            android:id="@+id/checkbox_L_baju_5"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Mempunyai tulisan,perkataaan atau gambar liar/lucah." />
-                    </RadioGroup>
+                    </LinearLayout>
+
                 </LinearLayout>
 
                 <LinearLayout
@@ -565,23 +573,24 @@
                             app:srcCompat="@drawable/icon_arrow_down" />
                     </LinearLayout>
 
-                    <RadioGroup
+                    <LinearLayout
                         android:id="@+id/radioGroup_seluar"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-
-                        <RadioButton
-                            android:id="@+id/radioButton"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <CheckBox
+                            android:id="@+id/checkbox_L_seluar_1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Memakai seluar pendek" />
 
-                        <RadioButton
-                            android:id="@+id/radioButton2"
+                        <CheckBox
+                            android:id="@+id/checkbox_L_seluar_2"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Ketak/koyak/lusuh/jarang" />
-                    </RadioGroup>
+                    </LinearLayout>
+
                 </LinearLayout>
 
                 <LinearLayout
@@ -611,19 +620,20 @@
                             android:layout_weight="5"
                             app:srcCompat="@drawable/icon_arrow_down" />
                     </LinearLayout>
-
-                    <RadioGroup
+                    <LinearLayout
                         android:id="@+id/radioGroup_kasut"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
 
-                        <RadioButton
-                            android:id="@+id/radioButton"
+                        <CheckBox
+                            android:id="@+id/checkbox_L_kasut_1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Memakai selipar" />
 
-                    </RadioGroup>
+                    </LinearLayout>
+
                 </LinearLayout>
 
                 <LinearLayout
@@ -654,26 +664,51 @@
                             app:srcCompat="@drawable/icon_arrow_down" />
                     </LinearLayout>
 
-                    <RadioGroup
+                    <LinearLayout
                         android:id="@+id/radioGroup_rambut"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-
-                        <RadioButton
-                            android:id="@+id/radioButton"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <CheckBox
+                            android:id="@+id/checkbox_L_rambut_1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Panjang / tidak kemas" />
 
-                        <RadioButton
-                            android:id="@+id/radioButton2"
+                        <CheckBox
+                            android:id="@+id/checkbox_L_rambut_2"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Mewarnakan rambut" />
-                    </RadioGroup>
+                    </LinearLayout>
+
                 </LinearLayout>
 
             </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@drawable/custom_background_linear_white_3"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imageView_saman"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@android:drawable/ic_menu_camera" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/button_saman"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@color/colorApps"
+                android:text="SAMAN"
+                android:textColor="@android:color/white" />
         </LinearLayout>
     </ScrollView>
 </LinearLayout>
