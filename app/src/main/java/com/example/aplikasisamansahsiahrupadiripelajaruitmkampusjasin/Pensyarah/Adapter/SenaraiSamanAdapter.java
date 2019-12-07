@@ -2,6 +2,7 @@ package com.example.aplikasisamansahsiahrupadiripelajaruitmkampusjasin.Pensyarah
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +11,7 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.aplikasisamansahsiahrupadiripelajaruitmkampusjasin.Pensyarah.Activity.DetailsSamanPensyarahActivity;
 import com.example.aplikasisamansahsiahrupadiripelajaruitmkampusjasin.Pensyarah.Class.SenaraiSamanClass;
 import com.example.aplikasisamansahsiahrupadiripelajaruitmkampusjasin.R;
 import com.squareup.picasso.Picasso;
@@ -44,7 +46,7 @@ public class SenaraiSamanAdapter extends RecyclerView.Adapter<SenaraiSamanAdapte
         final SenaraiSamanClass senaraiSamanClass = senaraiSamanClassList.get(position);
 
         holder.textView_nama.setText(senaraiSamanClass.getStudentName());
-        holder.textView_tarikh_masa.setText(senaraiSamanClass.getStudentName());
+        holder.textView_tarikh_masa.setText(senaraiSamanClass.getDateSaman());
         holder.textView_no_pelajar.setText(senaraiSamanClass.getStudentID());
         holder.textView_no_tel.setText(senaraiSamanClass.getStudentTel());
         holder.textView_kesalahan_baju.setText(senaraiSamanClass.getKesalahanBaju());
@@ -53,6 +55,35 @@ public class SenaraiSamanAdapter extends RecyclerView.Adapter<SenaraiSamanAdapte
         holder.textView_kesalahan_rambut.setText(senaraiSamanClass.getKesalahanRambut());
         holder.textView_saman_oleh.setText(senaraiSamanClass.getPensyarahName());
         Picasso.get().load(senaraiSamanClass.getImageSaman()).into(holder.imageView_saman);
+
+        if(senaraiSamanClass.getStatusDiscount().equals("0")){
+            holder.textView_harga.setText("50");
+        }else {
+            holder.textView_harga.setText("25");
+        }
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent next = new Intent(mCtx, DetailsSamanPensyarahActivity.class);
+                next.putExtra("1",senaraiSamanClass.getStudentName());
+                next.putExtra("2",senaraiSamanClass.getDateSaman());
+                next.putExtra("3",senaraiSamanClass.getStudentID());
+                next.putExtra("4",senaraiSamanClass.getStudentTel());
+                next.putExtra("5",senaraiSamanClass.getKesalahanBaju());
+                next.putExtra("6",senaraiSamanClass.getKesalahanSeluar());
+                next.putExtra("7",senaraiSamanClass.getKesalahanKasut());
+                next.putExtra("8",senaraiSamanClass.getKesalahanRambut());
+                next.putExtra("9",senaraiSamanClass.getPensyarahName());
+                next.putExtra("10",senaraiSamanClass.getImageSaman());
+                if(senaraiSamanClass.getStatusDiscount().equals("0")){
+                    next.putExtra("11","50");
+                }else {
+                    next.putExtra("11","25");
+                }
+                mCtx.startActivity(next);
+            }
+        });
     }
 
 
@@ -65,7 +96,7 @@ public class SenaraiSamanAdapter extends RecyclerView.Adapter<SenaraiSamanAdapte
     class ProductViewHolder extends RecyclerView.ViewHolder {
 
         TextView textView_nama,textView_tarikh_masa,textView_no_pelajar,textView_no_tel,textView_kesalahan_baju,
-                textView_kesalahan_seluar,textView_kesalahan_kasut,textView_kesalahan_rambut,textView_saman_oleh;
+                textView_kesalahan_seluar,textView_kesalahan_kasut,textView_kesalahan_rambut,textView_saman_oleh,textView_harga;
         ImageView imageView_saman;
 
         public ProductViewHolder(View itemView) {
@@ -81,6 +112,7 @@ public class SenaraiSamanAdapter extends RecyclerView.Adapter<SenaraiSamanAdapte
             textView_kesalahan_rambut = itemView.findViewById(R.id.textView_kesalahan_rambut);
             textView_saman_oleh = itemView.findViewById(R.id.textView_saman_oleh);
             imageView_saman = itemView.findViewById(R.id.imageView_saman);
+            textView_harga = itemView.findViewById(R.id.textView_harga);
 
 
 
