@@ -52,7 +52,8 @@ import java.util.Map;
 public class CreateSamanPensyarahActivity extends AppCompatActivity {
 
     String studentID,jantina;
-    TextView textView_nama,textView_no_tel,textView_no_pelajar,textView_no_kp,textView_kod_program,textView_tarikh_masa;
+    TextView textView_nama,textView_no_tel,textView_no_pelajar,textView_no_kp,textView_kod_program,
+            textView_tarikh_masa,textView_pensyarahName,textView_hargas;
     private DatabaseReference mDatabase;
     private DatabaseReference mDatabaseSaman;
     private StorageReference mStorageRef;
@@ -148,8 +149,30 @@ public class CreateSamanPensyarahActivity extends AppCompatActivity {
 
     }
 
+    public void itemClicked(View v) {
+        if(checkbox_p_baju_1.isChecked() || checkbox_p_baju_2.isChecked()|| checkbox_p_baju_3.isChecked()|| checkbox_p_baju_4.isChecked()
+                || checkbox_p_baju_5.isChecked()|| checkbox_p_baju_6.isChecked()
+                || checkbox_p_seluar_1.isChecked()|| checkbox_p_seluar_2.isChecked()
+                || checkbox_p_kasut_1.isChecked()
+                || checkbox_p_rambut_1.isChecked()|| checkbox_p_rambut_2.isChecked()
+                || checkbox_L_baju_1.isChecked()|| checkbox_L_baju_2.isChecked()|| checkbox_L_baju_3.isChecked()|| checkbox_L_baju_4.isChecked()
+                || checkbox_L_baju_5.isChecked()
+                || checkbox_L_seluar_1.isChecked()|| checkbox_L_seluar_2.isChecked()
+                || checkbox_L_kasut_1.isChecked()
+                || checkbox_L_rambut_1.isChecked()|| checkbox_L_rambut_2.isChecked()){
+            textView_hargas.setText("RM 50");
+
+        }else {
+            textView_hargas.setText("RM 0");
+        }
+    }
+
+
     //ALL DECLARE AT XML
     private void declareRation() {
+        textView_hargas =  findViewById(R.id.textView_hargas);
+        textView_pensyarahName= findViewById(R.id.textView_pensyarahName);
+        textView_pensyarahName.setText(MainDashboardPensyarah.pensyarah_name);
         textView_nama = findViewById(R.id.textView_nama);
         textView_no_tel = findViewById(R.id.textView_no_tel);
         textView_no_pelajar = findViewById(R.id.textView_no_pelajar);

@@ -1,4 +1,4 @@
-package com.example.aplikasisamansahsiahrupadiripelajaruitmkampusjasin.Pensyarah.Adapter;
+package com.example.aplikasisamansahsiahrupadiripelajaruitmkampusjasin.Pelajar.Adapter;
 
 import android.app.Activity;
 import android.content.Context;
@@ -13,7 +13,7 @@ import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.aplikasisamansahsiahrupadiripelajaruitmkampusjasin.Pensyarah.Activity.DetailsSamanPensyarahActivity;
-import com.example.aplikasisamansahsiahrupadiripelajaruitmkampusjasin.Pensyarah.Class.SenaraiSamanClass;
+import com.example.aplikasisamansahsiahrupadiripelajaruitmkampusjasin.Pelajar.Class.SenaraiSamanClass;
 import com.example.aplikasisamansahsiahrupadiripelajaruitmkampusjasin.R;
 import com.squareup.picasso.Picasso;
 
@@ -34,7 +34,7 @@ public class SenaraiSamanAdapter extends RecyclerView.Adapter<SenaraiSamanAdapte
     @Override
     public ProductViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(mCtx);
-        View view = inflater.inflate(R.layout.custom_adapter_senarai_saman_pensyarah, null,false);
+        View view = inflater.inflate(R.layout.custom_adapter_senarai_saman_pelajar, null,false);
         RecyclerView.LayoutParams lp = new RecyclerView.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
         view.setLayoutParams(lp);
         return new ProductViewHolder(view);
@@ -49,7 +49,7 @@ public class SenaraiSamanAdapter extends RecyclerView.Adapter<SenaraiSamanAdapte
         holder.textView_nama.setText(senaraiSamanClass.getStudentName());
         holder.textView_tarikh_masa.setText(senaraiSamanClass.getDateSaman());
         holder.textView_no_pelajar.setText(senaraiSamanClass.getStudentID());
-        holder.textView_no_tel.setText(senaraiSamanClass.getStudentTel());
+        holder.textView_no_tel.setText(senaraiSamanClass.getPensyarahName());
         holder.textView_kesalahan_baju.setText(senaraiSamanClass.getKesalahanBaju());
         holder.textView_kesalahan_seluar.setText(senaraiSamanClass.getKesalahanSeluar());
         holder.textView_kesalahan_kasut.setText(senaraiSamanClass.getKesalahanKasut());

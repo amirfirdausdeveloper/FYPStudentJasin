@@ -47,6 +47,7 @@ public class LoginActivity extends AppCompatActivity {
         button_login = findViewById(R.id.button_login);
         button_daftar = findViewById(R.id.button_daftar);
 
+
         //ON CLICK BACK
         imageView_back.setOnClickListener(new View.OnClickListener() {
             @Override

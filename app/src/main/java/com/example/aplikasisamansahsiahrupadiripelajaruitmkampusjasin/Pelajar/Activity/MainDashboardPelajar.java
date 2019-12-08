@@ -8,6 +8,9 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -16,10 +19,12 @@ import com.example.aplikasisamansahsiahrupadiripelajaruitmkampusjasin.Pelajar.Fr
 import com.example.aplikasisamansahsiahrupadiripelajaruitmkampusjasin.Pelajar.Fragment.PelajarSenaraiPensyarahFragment;
 import com.example.aplikasisamansahsiahrupadiripelajaruitmkampusjasin.Pelajar.Fragment.PelajarSenaraiSamanFragment;
 import com.example.aplikasisamansahsiahrupadiripelajaruitmkampusjasin.Pelajar.Fragment.PelajarUtamaFragment;
+import com.example.aplikasisamansahsiahrupadiripelajaruitmkampusjasin.Pensyarah.Activity.MainDashboardPensyarah;
 import com.example.aplikasisamansahsiahrupadiripelajaruitmkampusjasin.Pensyarah.Fragment.PensyarahProfilFragment;
 import com.example.aplikasisamansahsiahrupadiripelajaruitmkampusjasin.Pensyarah.Fragment.PensyarahSamanFragment;
 import com.example.aplikasisamansahsiahrupadiripelajaruitmkampusjasin.Pensyarah.Fragment.PensyarahSenaraiSamanFragment;
 import com.example.aplikasisamansahsiahrupadiripelajaruitmkampusjasin.Pensyarah.Fragment.PensyarahUtamaFragment;
+import com.example.aplikasisamansahsiahrupadiripelajaruitmkampusjasin.Pelajar.Login.LoginActivity;
 import com.example.aplikasisamansahsiahrupadiripelajaruitmkampusjasin.R;
 import com.google.android.material.navigation.NavigationView;
 
@@ -95,7 +100,7 @@ public class MainDashboardPelajar extends AppCompatActivity implements Navigatio
             fragment = new PelajarSenaraiSamanFragment();
             displaySelectedFragment(fragment);
         }else if (id == R.id.nav_keluar) {
-
+            logKeluar();
         }
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
@@ -107,6 +112,29 @@ public class MainDashboardPelajar extends AppCompatActivity implements Navigatio
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.frame, fragment);
         fragmentTransaction.commit();
+    }
+
+    private void logKeluar(){
+        new AlertDialog.Builder(MainDashboardPelajar.this)
+                .setCancelable(true)
+                .setIcon(android.R.drawable.ic_dialog_alert)
+                .setMessage("Adakah anda ingit log keluar?")
+                .setPositiveButton("Ya", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Intent next = new Intent(getApplicationContext(), LoginActivity.class);
+                        startActivity(next);
+                    }
+                }).setNegativeButton("Tidak", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+                navigationView.setCheckedItem(R.id.nav_utama);
+                navigationView.getMenu().performIdentifierAction(R.id.nav_utama, 0);
+
+            }
+        })
+                .show();
     }
 }
 

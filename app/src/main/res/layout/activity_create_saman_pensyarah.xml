@@ -282,36 +282,42 @@
                         android:orientation="vertical">
 
                         <CheckBox
+                            android:onClick="itemClicked"
                             android:id="@+id/checkbox_p_baju_1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Jarang" />
 
                         <CheckBox
+                            android:onClick="itemClicked"
                             android:id="@+id/checkbox_p_baju_2"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Singkat (Tidak menutup punggung) " />
 
                         <CheckBox
+                            android:onClick="itemClicked"
                             android:id="@+id/checkbox_p_baju_3"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Mempunyai tulisan,perkataaan atau gambar liar/lucah." />
 
                         <CheckBox
+                            android:onClick="itemClicked"
                             android:id="@+id/checkbox_p_baju_4"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Lengan baju tidak sampai ke paras siku" />
 
                         <CheckBox
+                            android:onClick="itemClicked"
                             android:id="@+id/checkbox_p_baju_5"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Baju masuk ke dalam (tuck in)" />
 
                         <CheckBox
+                            android:onClick="itemClicked"
                             android:id="@+id/checkbox_p_baju_6"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -354,12 +360,14 @@
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
                         <CheckBox
+                            android:onClick="itemClicked"
                             android:id="@+id/checkbox_p_seluar_1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Terlalu ketat" />
 
                         <CheckBox
+                            android:onClick="itemClicked"
                             android:id="@+id/checkbox_p_seluar_2"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -403,6 +411,7 @@
                         android:orientation="vertical">
 
                         <CheckBox
+                            android:onClick="itemClicked"
                             android:id="@+id/checkbox_p_kasut_1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -448,12 +457,14 @@
                         android:orientation="vertical">
 
                         <CheckBox
+                            android:onClick="itemClicked"
                             android:id="@+id/checkbox_p_rambut_1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Panjang / tidak kemas" />
 
                         <CheckBox
+                            android:onClick="itemClicked"
                             android:id="@+id/checkbox_p_rambut_2"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -513,30 +524,35 @@
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
                         <CheckBox
+                            android:onClick="itemClicked"
                             android:id="@+id/checkbox_L_baju_1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Jarang" />
 
                         <CheckBox
+                            android:onClick="itemClicked"
                             android:id="@+id/checkbox_L_baju_2"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Tidak berkolar pada waktu pejabat" />
 
                         <CheckBox
+                            android:onClick="itemClicked"
                             android:id="@+id/checkbox_L_baju_3"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Tidak dimasukkan ke dalam seluar (Baju jenis masuk ke dalam)" />
 
                         <CheckBox
+                            android:onClick="itemClicked"
                             android:id="@+id/checkbox_L_baju_4"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Tidak Berlengan" />
 
                         <CheckBox
+                            android:onClick="itemClicked"
                             android:id="@+id/checkbox_L_baju_5"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -579,12 +595,14 @@
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
                         <CheckBox
+                            android:onClick="itemClicked"
                             android:id="@+id/checkbox_L_seluar_1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Memakai seluar pendek" />
 
                         <CheckBox
+                            android:onClick="itemClicked"
                             android:id="@+id/checkbox_L_seluar_2"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -627,6 +645,7 @@
                         android:orientation="vertical">
 
                         <CheckBox
+                            android:onClick="itemClicked"
                             android:id="@+id/checkbox_L_kasut_1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -670,12 +689,14 @@
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
                         <CheckBox
+                            android:onClick="itemClicked"
                             android:id="@+id/checkbox_L_rambut_1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Panjang / tidak kemas" />
 
                         <CheckBox
+                            android:onClick="itemClicked"
                             android:id="@+id/checkbox_L_rambut_2"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -700,15 +721,82 @@
                     app:srcCompat="@android:drawable/ic_menu_camera" />
             </LinearLayout>
 
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView12"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Harga : "
+                        android:textColor="@android:color/black"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textView_hargas"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:text=""
+                        android:textColor="@android:color/black"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/textView12"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Pelapor : "
+                        android:textColor="@android:color/black"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/textView_pensyarahName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:text=""
+                        android:textColor="@android:color/black"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+            </LinearLayout>
+
             <Button
                 android:id="@+id/button_saman"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:layout_marginBottom="20dp"
+                android:layout_marginBottom="10dp"
                 android:background="@color/colorApps"
                 android:text="SAMAN"
                 android:textColor="@android:color/white" />
+
+            <TextView
+                android:layout_marginBottom="30dp"
+                android:id="@+id/textView16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Kompaun ini hendaklah dijelaskan dalam tempoh 5 hari. Sekiranya tidak boleh dijelaskan dalam tempoh yang ditetapkan, kadar maksimum boleh dikenakan
+Di bawah Kaedah 26A(1) Bahagian II, Jadual Kedua Akta 174, kesalahan ini boleh dikenakan kompaun tidak melebihi RM50.00 bagi setiap kesalahan. Anda dikehendaki membayar kompaun yang telah ditetapkan sebelum tarikh yang ditetapkan. Jika kompaun ini tidak dijelaskan pada tarikh tersebut mengikut Kaedah 64, Bahagian V, Jadual Kedua Akta 174(1976), tindakan menggantung dari menjadi pelajar UiTM akan diambil." />
         </LinearLayout>
     </ScrollView>
 </LinearLayout>
