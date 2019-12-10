@@ -11,8 +11,10 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.example.aplikasisamansahsiahrupadiripelajaruitmkampusjasin.Admin.Activity.MainDashboardAdmin;
 import com.example.aplikasisamansahsiahrupadiripelajaruitmkampusjasin.Admin.Register.RegisterActivity;
 import com.example.aplikasisamansahsiahrupadiripelajaruitmkampusjasin.MainActivity;
+import com.example.aplikasisamansahsiahrupadiripelajaruitmkampusjasin.Pensyarah.Activity.MainDashboardPensyarah;
 import com.example.aplikasisamansahsiahrupadiripelajaruitmkampusjasin.R;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -81,9 +83,12 @@ public class LoginActivity extends AppCompatActivity {
                     @Override
                     public void onDataChange(DataSnapshot dataSnapshot) {
                         if (dataSnapshot.exists()) {
-                            for (DataSnapshot pensyarah: dataSnapshot.getChildren()) {
-                                if(editText_password.getText().toString().equals(pensyarah.child("katalaluan").getValue().toString())){
-                                    Toast.makeText(getApplicationContext(),"Daftar masuk berjaya",Toast.LENGTH_LONG).show();
+                            for (DataSnapshot admin: dataSnapshot.getChildren()) {
+                                if(editText_password.getText().toString().equals(admin.child("katalaluan").getValue().toString())){
+                                    Intent next = new Intent(getApplicationContext(), MainDashboardAdmin.class);
+                                    next.putExtra("email",editText_email.getText().toString());
+                                    next.putExtra("nama",admin.child("name").getValue().toString());
+                                    startActivity(next);
                                 }else{
                                     Toast.makeText(getApplicationContext(), "Katalaluan tidak sah !!!", Toast.LENGTH_LONG).show();
                                 }

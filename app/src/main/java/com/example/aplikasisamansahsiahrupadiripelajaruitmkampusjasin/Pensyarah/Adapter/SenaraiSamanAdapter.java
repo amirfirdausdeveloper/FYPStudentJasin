@@ -58,9 +58,14 @@ public class SenaraiSamanAdapter extends RecyclerView.Adapter<SenaraiSamanAdapte
 
         if(senaraiSamanClass.getStatusDiscount().equals("0")){
             holder.textView_harga.setText("50");
-        }else {
+        }else if(senaraiSamanClass.getStatusDiscount().equals("1")){
             holder.textView_harga.setText("25");
+        }else if(senaraiSamanClass.getStatusDiscount().equals("2")){
+            holder.textView_harga.setText("50");
+        }else if(senaraiSamanClass.getStatusDiscount().equals("3")){
+            holder.textView_harga.setText("50");
         }
+
 
         if(senaraiSamanClass.getStatusBayaran().equals("0")){
             holder.textView_saman_oleh.setText("Belum");
@@ -87,8 +92,12 @@ public class SenaraiSamanAdapter extends RecyclerView.Adapter<SenaraiSamanAdapte
                 next.putExtra("10",senaraiSamanClass.getImageSaman());
                 if(senaraiSamanClass.getStatusDiscount().equals("0")){
                     next.putExtra("11","50");
-                }else {
+                }else if(senaraiSamanClass.getStatusDiscount().equals("1")){
                     next.putExtra("11","25");
+                }else if(senaraiSamanClass.getStatusDiscount().equals("2")){
+                    next.putExtra("11","50");
+                }else if(senaraiSamanClass.getStatusDiscount().equals("3")){
+                    next.putExtra("11","50");
                 }
                 mCtx.startActivity(next);
             }

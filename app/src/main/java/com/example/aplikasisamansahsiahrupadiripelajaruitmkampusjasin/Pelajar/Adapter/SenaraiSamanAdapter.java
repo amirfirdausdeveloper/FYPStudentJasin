@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.aplikasisamansahsiahrupadiripelajaruitmkampusjasin.Pelajar.Activity.DetailsSamanPelajarActivity;
 import com.example.aplikasisamansahsiahrupadiripelajaruitmkampusjasin.Pensyarah.Activity.DetailsSamanPensyarahActivity;
 import com.example.aplikasisamansahsiahrupadiripelajaruitmkampusjasin.Pelajar.Class.SenaraiSamanClass;
 import com.example.aplikasisamansahsiahrupadiripelajaruitmkampusjasin.R;
@@ -58,8 +59,12 @@ public class SenaraiSamanAdapter extends RecyclerView.Adapter<SenaraiSamanAdapte
 
         if(senaraiSamanClass.getStatusDiscount().equals("0")){
             holder.textView_harga.setText("50");
-        }else {
+        }else if(senaraiSamanClass.getStatusDiscount().equals("1")){
             holder.textView_harga.setText("25");
+        }else if(senaraiSamanClass.getStatusDiscount().equals("2")){
+            holder.textView_harga.setText("50");
+        }else if(senaraiSamanClass.getStatusDiscount().equals("3")){
+            holder.textView_harga.setText("50");
         }
 
         if(senaraiSamanClass.getStatusBayaran().equals("0")){
@@ -74,7 +79,7 @@ public class SenaraiSamanAdapter extends RecyclerView.Adapter<SenaraiSamanAdapte
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent next = new Intent(mCtx, DetailsSamanPensyarahActivity.class);
+                Intent next = new Intent(mCtx, DetailsSamanPelajarActivity.class);
                 next.putExtra("1",senaraiSamanClass.getStudentName());
                 next.putExtra("2",senaraiSamanClass.getDateSaman());
                 next.putExtra("3",senaraiSamanClass.getStudentID());
@@ -87,9 +92,14 @@ public class SenaraiSamanAdapter extends RecyclerView.Adapter<SenaraiSamanAdapte
                 next.putExtra("10",senaraiSamanClass.getImageSaman());
                 if(senaraiSamanClass.getStatusDiscount().equals("0")){
                     next.putExtra("11","50");
-                }else {
+                }else if(senaraiSamanClass.getStatusDiscount().equals("1")){
                     next.putExtra("11","25");
+                }else if(senaraiSamanClass.getStatusDiscount().equals("2")){
+                    next.putExtra("11","50");
+                }else if(senaraiSamanClass.getStatusDiscount().equals("3")){
+                    next.putExtra("11","50");
                 }
+                next.putExtra("12",senaraiSamanClass.getStatusDiscount());
                 mCtx.startActivity(next);
             }
         });

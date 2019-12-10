@@ -44,7 +44,7 @@ public class DetailsSamanPensyarahActivity extends AppCompatActivity {
         textView_kesalahan_rambut.setText(getIntent().getStringExtra("8"));
         textView_saman_oleh.setText(getIntent().getStringExtra("9"));
         Picasso.get().load(getIntent().getStringExtra("10")).into(imageView_saman);
-        textView_saman_oleh.setText(getIntent().getStringExtra("11"));
+        textView_harga.setText(getIntent().getStringExtra("11"));
 
         imageView_back.setOnClickListener(new View.OnClickListener() {
             @Override
