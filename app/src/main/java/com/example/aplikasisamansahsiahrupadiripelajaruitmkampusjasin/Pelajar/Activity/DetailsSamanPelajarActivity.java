@@ -99,7 +99,7 @@ public class DetailsSamanPelajarActivity extends AppCompatActivity {
                 button_discount.setBackgroundColor(Color.GREEN);
             }
             if(status_discount.equals("2")){
-                button_discount.setText("PERMOHONAN DISKAUN DITERIMA");
+                button_discount.setText("PERMOHONAN DISKAUN DITOLAK");
                 button_discount.setBackgroundColor(Color.RED);
             }
             if(status_discount.equals("3")){

@@ -18,6 +18,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".Admin.Activity.DetailsSamanAdminActivity"></activity>
         <activity android:name=".Pelajar.Activity.DetailsSamanPelajarActivity"></activity>
         <activity android:name=".Pensyarah.Activity.DetailsSamanPensyarahActivity"></activity>
         <activity android:name=".Pensyarah.Activity.CreateSamanPensyarahActivity" />

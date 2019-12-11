@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.aplikasisamansahsiahrupadiripelajaruitmkampusjasin.Pensyarah.Activity.MainDashboardPensyarah;
-import com.example.aplikasisamansahsiahrupadiripelajaruitmkampusjasin.Pensyarah.Adapter.SenaraiSamanAdapter;
+import com.example.aplikasisamansahsiahrupadiripelajaruitmkampusjasin.Admin.Adapter.SenaraiSamanAdapter;
 import com.example.aplikasisamansahsiahrupadiripelajaruitmkampusjasin.Pensyarah.Class.SenaraiSamanClass;
 import com.example.aplikasisamansahsiahrupadiripelajaruitmkampusjasin.R;
 import com.google.firebase.database.DataSnapshot;
@@ -28,7 +28,7 @@ import java.util.List;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class PensyarahSenaraiSamanFragment extends Fragment {
+public class AdminSenaraiSamanFragment extends Fragment {
 
 
     private DatabaseReference mDatabaseSaman;
@@ -75,14 +75,12 @@ public class PensyarahSenaraiSamanFragment extends Fragment {
         recyclerView.setLayoutManager(horizontalLayoutManager);
         recyclerView.setAdapter(senaraiSamanAdapter);
 
-        mDatabaseSaman.orderByChild("pensyarahID").equalTo(MainDashboardPensyarah.pensyarah_email)
+        mDatabaseSaman
                 .addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(DataSnapshot dataSnapshot) {
                         if (dataSnapshot.exists()) {
                             for (DataSnapshot saman: dataSnapshot.getChildren()) {
-                                Log.d("YAWW",saman.child("dateSaman").getValue().toString());
-
                                 senaraiSamanClasses.add(new SenaraiSamanClass(
                                         saman.child("dateSaman").getValue().toString(),
                                         saman.child("imageSaman").getValue().toString(),
