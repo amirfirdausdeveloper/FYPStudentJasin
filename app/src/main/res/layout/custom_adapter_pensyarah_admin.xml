@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/custom_background_linear_white_3"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:id="@+id/textView_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:text="AMIR FIRDAUS BIN SAMSUDIN" />
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:id="@+id/textView_jawatan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="PENSYARAH" />
+        <TextView
+            android:layout_marginTop="3dp"
+            android:id="@+id/textView_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="amirfirdausoff@gmail.com" />
+        <TextView
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="3dp"
+            android:id="@+id/textView_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="0136081985" />
+    </LinearLayout>
+</LinearLayout>

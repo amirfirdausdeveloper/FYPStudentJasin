@@ -16,7 +16,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.example.aplikasisamansahsiahrupadiripelajaruitmkampusjasin.Admin.Fragment.AdminProfilFragment;
-import com.example.aplikasisamansahsiahrupadiripelajaruitmkampusjasin.Admin.Fragment.PensyarahSamanFragment;
+import com.example.aplikasisamansahsiahrupadiripelajaruitmkampusjasin.Admin.Fragment.AdminSenaraiPensyarahFragment;
 import com.example.aplikasisamansahsiahrupadiripelajaruitmkampusjasin.Admin.Fragment.AdminSenaraiSamanFragment;
 import com.example.aplikasisamansahsiahrupadiripelajaruitmkampusjasin.Admin.Fragment.AdminUtamaFragment;
 import com.example.aplikasisamansahsiahrupadiripelajaruitmkampusjasin.Admin.Login.LoginActivity;
@@ -92,7 +92,7 @@ public class MainDashboardAdmin extends AppCompatActivity implements NavigationV
             fragment = new AdminProfilFragment();
             displaySelectedFragment(fragment);
         }else if (id == R.id.nav_saman) {
-            fragment = new PensyarahSamanFragment();
+            fragment = new AdminSenaraiPensyarahFragment();
             displaySelectedFragment(fragment);
         }else if (id == R.id.nav_senarai_saman) {
             fragment = new AdminSenaraiSamanFragment();
